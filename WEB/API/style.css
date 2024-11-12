@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Signika:wght@300..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: "Jost", "Signika", sans-serif;
+    background: rebeccapurple;
+    min-height: 100vh;
+    letter-spacing: 0.01rem;
+    word-spacing: 0.05rem;
+    padding: 1rem 0;
+    scroll-behavior: smooth;
+}
+
+section {
+    min-height: 100vh;
+    padding: 1rem;
+    margin: auto;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Signika", serif;
+    margin-bottom: 1rem;
+    color: white;
+    text-transform: capitalize;
+}
+
+.randomquotes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.randomquotes .card {
+    background: white;
+    border-radius: 1rem;
+    padding: 4rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+    margin: 1.4rem;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    position: relative;
+}
+
+.randomquotes .quote-card:after, .randomquotes .quote-card:before {
+    font-family: "Signika",serif;
+    font-size: 15rem;
+    position: absolute;
+    color: white;
+    -webkit-text-stroke: 0.4rem rebeccapurple;
+    stroke-width: 3rem;
+}
+
+.randomquotes .quote-card:before {
+    content: '“';
+    top: -4rem;
+    left: -2rem;
+}
+
+.randomquotes .quote-card:after {
+    content: '”';
+    bottom: -13.5rem;
+    right: -2rem;
+}
+
+.randomquotes .quote-card .quote {
+    text-align: center;
+}
+
+.randomquotes .quote-card .author {
+    font-weight: 700;
+}
+
+.updatequotebtn {
+    all: unset;
+    padding: 1rem 2rem;
+    background: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    border-radius: 0.4rem;
+    margin: 2rem 0;
+}
+
+@media screen and (max-width: 1000px) {
+    .randomquotes {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .randomquotes {
+        grid-template-columns: 1fr;
+    }
+}
