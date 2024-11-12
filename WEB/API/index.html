@@ -3,14 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Quotes</title>
+    <title>API Usage</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <header>
-
-    </header>
     <main id="main-content">
         <section id="quote">
             <h1 class="section-title">quotes</h1>
@@ -40,18 +36,25 @@
                     <div class="author">Rumi</div>
                 </div>
             </div>
-            <button class="updatequotebtn" onclick="UpdateQuotes()">Update Quotes</button>
+            <button class="updatebtn" onclick="UpdateQuotes()">Update Quotes</button>
         </section>
         <hr>
         <section id="rGIF">
             <h1 class="section-title">Random GIF</h1>
             <div class="randomGIF" id="randomGIF">
-                <div class="card" class="card GIF-card"></div>
+                <div class="card" class="card GIF-card">
+                    <img src="https://giphy.com/gifs/happy-yay-Y64uBZCJsl0TS" alt="Random GIF" id="RandomGIFImage">
+                    "Powered By GIPHY"
+                </div>
             </div>
+            <button class="updatebtn" onclick="RandomGIF()">Update GIF</button>
         </section>
+        <!-- <hr>
         <section class="customGIF" id="customGIF">
+            <h1 class="section-title">Custom Random GIF</h1>
             <div class="card" class="card GIF-card"></div>
-        </section>
+            <input type="text" name="gif_textinput" id="gif_textinput">
+        </section> -->
     </main>
 
     <script src="script.js"></script>

@@ -16,7 +16,7 @@ body {
 }
 
 section {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     padding: 1rem;
     margin: auto;
     max-width: 1200px;
@@ -41,7 +41,7 @@ section {
     justify-content: center;
 }
 
-.randomquotes .card {
+.card {
     background: white;
     border-radius: 1rem;
     padding: 4rem 2rem;
@@ -87,7 +87,7 @@ section {
     font-weight: 700;
 }
 
-.updatequotebtn {
+.updatebtn {
     all: unset;
     padding: 1rem 2rem;
     background: white;
@@ -96,6 +96,16 @@ section {
     font-weight: bolder;
     border-radius: 0.4rem;
     margin: 2rem 0;
+}
+
+#rGIF #randomGIF .card {
+    padding: 2rem;
+}
+
+#RandomGIFImage {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 0.8rem;
 }
 
 @media screen and (max-width: 1000px) {

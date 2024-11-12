@@ -1,5 +1,5 @@
 const QuoteCards = document.querySelectorAll("#randomquotes .quote-card");
-const RandomGIFCard = document.querySelectorAll("#randomGIF .quote-card");
+const RandomGIFCard = document.getElementById("RandomGIFImage");
 
 var quotejson = {};
 let quotes = 6;
@@ -19,6 +19,16 @@ async function UpdateQuotes(){
     skip+=quotes;
 }
 
+async function RandomGIF(){
+    let tag = "anime";
+    let apikey = "7C534T1aRgYyku3d6Z4FRewNIsXhVsRl";
+    let url_link = "https://api.giphy.com/v1/gifs/random?api_key="+apikey+"&tag="+tag
+    gif = await fetch(url_link)
+    gif = await gif.json()
+    RandomGIFCard.src = gif.data.images.original.url;
+}
+
 UpdateQuotes();
+RandomGIF();
 
 // api.giphy.com/v1/gifs/random?api_key=7C534T1aRgYyku3d6Z4FRewNIsXhVsRl&tag=anime
